@@ -16,7 +16,7 @@ $ playwright install chromium
 
 # Run the tests
 # TODO: fix the URL
-$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<letter>.<group>.hr.dmerej.info/
+$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://g.se1.hr.dmerej.info/
 ```
 
 ## Using `ipdb` as debugger
