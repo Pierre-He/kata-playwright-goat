@@ -15,7 +15,7 @@ $ pip install -r requirements.txt
 $ playwright install chromium
 
 # Run the tests
-# TODO: fix the URL
+# TODO: fix the URL -> Done
 $ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://g.se1.hr.dmerej.info/
 ```
 
