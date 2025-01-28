@@ -1,20 +1,11 @@
-def test_promote_manager_two_times(page):
+from conftest import reset_database, add_employee
+
+def test_promote_manager_two_times(page, reset_database, add_employee):
     # Make sure db is empty
-    page.goto("/reset_db")
-    page.locator("button:has-text('proceed')").click()
+    reset_database()
 
     # Create an employee
-    page.goto("/")
-    page.goto("/add_employee")
-    page.locator('input[name="name"]').fill("Kevin Tournepine")
-    page.locator('input[name="email"]').fill("kevin.tournepine@gmail.com")
-    page.locator('input[name="address_line1"]').fill("500 Voilorage")
-    page.locator('input[name="city"]').fill("Voilorage")
-    page.locator('input[name="zip_code"]').fill("50069")
-    page.locator('input[name="hiring_date"]').fill("2025-01-28")
-    page.locator('input[name="job_title"]').fill("Expert Fiscal")
-
-    page.locator("button:has-text('Add')").click()
+    add_employee()
 
     # Goto employees list
     page.goto("/employees")
